@@ -6,9 +6,9 @@
     <title>PhukienDoraStore|Trang chủ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <style> .mySlides3 { width:100%}  /*---Css Nút qua lại---*/ .button-left{left:1%; font-size:20px} .button-right{right:1%; font-size:20px } .image-button{border:none;display:inline-block;padding:10px;height:50px;vertical-align:middle;overflow:hidden; color:#fff;background:#000;position:absolute;top:calc(50% - 25px); opacity:0.5;} .image-button:hover{color:#000;background:#ccc;} /*---Css Chấm tròn---*/ .badge {text-align:center; margin-bottom:16px; font-size:20px;position:absolute;bottom:0;} .badge-white{color:#000!important;background-color:#fff!important} .image-badge {display:inline-block;border-radius:50%;height:14px;width:14px; border:1px solid #ccc;} .image-badge:hover{background:#fff;} </style>
-</head>
+<style>.animate-fading{width:100%;height:300px;padding-left: 15%;padding-right: 15%; animation: 10s;}
+ </style>
+   </head>
 <body> 
   <header>
     <p style="font-family: Arial, Helvetica, sans-serif; text-align: center;text-decoration: underline ;">@PhukienDoraStore</p>
@@ -59,6 +59,12 @@
                   <a href="#">Khác</a>
                 </div>
                 <div class="column">
+                  <h3>Game</h3>
+                  <a href="#">Tay cầm</a>
+                  <a href="#"></a>
+                  <a href="#"></a>
+                </div>
+                <div class="column">
                   <h3>Other(Phụ Kiện khác)</h3>
                   <a href="#">Cường lực</a>
                   <a href="#">Dán trong suốt PPF bảo vệ</a>
@@ -89,12 +95,16 @@
             document.getElementById("myOverlay").style.display = "none";
           }
           </script> </div>
-       
-      </div>
-      <div class="display-container"> <img class="mySlides3" src="https://canxem.com/img/1.jpg"> <img class="mySlides3" src="https://canxem.com/img/2.jpg"> <img class="mySlides3" src="https://canxem.com/img/3.jpg"> <button class="image-button button-left" onclick="plusDivs(-1)">&#10094;</button> <button class="image-button button-right" onclick="plusDivs(1)">&#10095;</button> <div class="badge" style="width:100%"> <span class="image-badge" onclick="currentDiv(1)"></span> <span class="image-badge" onclick="currentDiv(2)"></span> <span class="image-badge" onclick="currentDiv(3)"></span> </div> </div> 
-      
-      <script> var slideIndex = 1; showDivs(slideIndex); function plusDivs(n) { showDivs(slideIndex += n); } function currentDiv(n) { showDivs(slideIndex = n); } function showDivs(n) { var i; var x = document.getElementsByClassName("mySlides3"); var dots = document.getElementsByClassName("image-badge"); if (n > x.length) {slideIndex = 1} if (n < 1) {slideIndex = x.length} for (i = 0; i < x.length; i++) { x[i].style.display = "none"; } for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" badge-white", ""); } x[slideIndex-1].style.display = "block"; dots[slideIndex-1].className += " badge-white"; } </script>
-    
+          <div>
 
-</body>
+          
+            <img class="mySlides2 animate-fading" src="https://canxem.com/img/1.jpg">
+            <img class="mySlides2 animate-fading" src="https://canxem.com/img/2.jpg">
+            <img class="mySlides2 animate-fading" src="https://canxem.com/img/3.jpg">
+            <img class="mySlides2 animate-fading" src="https://canxem.com/img/4.jpg">
+          </div></div>
+       
+  
+      <script> var myIndex = 0; carousel2(); function carousel2() { var i; var x = document.getElementsByClassName("mySlides2"); for (i = 0; i < x.length; i++) { x[i].style.display = "none"; } myIndex++; if (myIndex > x.length) {myIndex = 1} x[myIndex-1].style.display = "block"; setTimeout(carousel2, 7000); } </script>
+    </body>
 </html>
