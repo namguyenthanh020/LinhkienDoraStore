@@ -262,7 +262,7 @@ border-radius: 20px;
   .overlay button:hover {
     background: #bbb;
   }
-  button{
+ .navbar button{
     background-color: #00000000;
     border-radius:100% ;
   }
